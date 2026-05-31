@@ -4,7 +4,7 @@
 
       <!-- Logo — flush to left edge -->
       <RouterLink to="/" class="flex items-center pl-0">
-        <img src="../assets/images/logo.ico" alt="Logo" class="h-16 w-auto" />
+        <img src="../assets/images/logo.ico" alt="Logo" class="h-10 w-auto" />
       </RouterLink>
 
       <!-- Right side: nav links + language — flush to right edge -->
