@@ -9,8 +9,7 @@ import flagImage from '../assets/images/flag.jpg'
       <!-- Background Image -->
       <img :src="flagImage" alt="Rwanda Flag" class="absolute inset-0 w-full h-full object-cover" />
       
-      <!-- Green overlay with low opacity -->
-      <div class="absolute inset-0 bg-green-900 opacity-60"></div>
+
       
       <!-- Dark overlay for text readability -->
       <div class="absolute inset-0 bg-black/30"></div>

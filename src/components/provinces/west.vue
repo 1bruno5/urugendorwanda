@@ -1,10 +1,10 @@
 <template>
   <div class="font-sans">
 
-    <!-- Hero -->
+  
     <section class="relative h-[500px] flex items-end overflow-hidden">
       <img src="../../assets/images/lake.jpg" alt="Lake Kivu" class="absolute inset-0 w-full h-full object-cover" />
-      <div class="absolute inset-0 bg-green-900/70"></div>
+
       <div class="relative z-10 max-w-6xl mx-auto px-6 pb-14 w-full">
         <div class="flex items-center gap-2 text-green-200 text-sm mb-3">
           <a href="/" class="hover:text-yellow-300 transition-colors">Home</a>
@@ -26,15 +26,7 @@
       </div>
     </section>
 
-    <!-- Quick Facts -->
-    <section class="bg-yellow-400 py-5">
-      <div class="max-w-6xl mx-auto px-6 grid grid-cols-2 md:grid-cols-5 gap-4 text-center">
-        <div v-for="fact in quickFacts" :key="fact.label" class="text-green-900">
-          <div class="text-xl font-black">{{ fact.value }}</div>
-          <div class="text-xs font-semibold tracking-wide uppercase mt-1">{{ fact.label }}</div>
-        </div>
-      </div>
-    </section>
+
 
     <!-- About -->
     <section class="py-24 bg-white">

@@ -45,7 +45,7 @@
 
       <!-- Copyright -->
       <div class="border-t border-green-600 mt-8 pt-4 text-sm text-green-200">
-        <p class="text-center">2026 visit Rwanda. All rights reserved</p>
+        <p class="text-center">ABAKUNDANYE MUGISHA Bruno. All rights reserved</p>
       </div>
     </div>
   </footer>
