@@ -124,13 +124,7 @@
 </template>
 
 <script setup>
-const quickFacts = [
-  { value: 'Kigali', label: 'Capital City' },
-  { value: '730 km²', label: 'City Area' },
-  { value: '~1.5M', label: 'Population' },
-  { value: '1,567m', label: 'Altitude' },
-  { value: '0 min', label: 'From Airport' },
-]
+
 
 const culture = [
   { icon: '', title: 'Intore Dance', desc: 'Rwanda\'s iconic traditional warrior dance — performed at cultural centres and national events across Kigali.' },

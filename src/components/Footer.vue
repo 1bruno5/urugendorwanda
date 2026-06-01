@@ -5,35 +5,35 @@
         <!-- About section -->
         <div>
           <h3 class="text-yellow-300 font-bold text-lg mb-3">TEMBERA URWANDA</h3>
-          <p class="text-green-200">Discover the beauty of the land of thousand hills</p>
+          <p class="text-green-200">{{ t('footer_tagline') }}</p>
         </div>
 
         <!-- Quick links -->
         <div>
-          <h3 class="text-yellow-300 font-bold text-lg mb-3">Quick Links</h3>
+          <h3 class="text-yellow-300 font-bold text-lg mb-3">{{ t('footer_quick_links') }}</h3>
           <ul class="space-y-2 text-sm">
-            <li><RouterLink to="/" class="text-green-200 hover:text-yellow-300 transition-colors">Home</RouterLink></li>
-            <li><RouterLink to="/about" class="text-green-200 hover:text-yellow-300 transition-colors">About</RouterLink></li>
-            <li><RouterLink to="/contact" class="text-green-200 hover:text-yellow-300 transition-colors">Contact</RouterLink></li>
-            <li><RouterLink to="/services" class="text-green-200 hover:text-yellow-300 transition-colors">Services</RouterLink></li>
+            <li><RouterLink to="/" class="text-green-200 hover:text-yellow-300 transition-colors">{{ t('home') }}</RouterLink></li>
+            <li><RouterLink to="/about" class="text-green-200 hover:text-yellow-300 transition-colors">{{ t('about') }}</RouterLink></li>
+            <li><RouterLink to="/contact" class="text-green-200 hover:text-yellow-300 transition-colors">{{ t('contact') }}</RouterLink></li>
+            <li><RouterLink to="/services" class="text-green-200 hover:text-yellow-300 transition-colors">{{ t('services') }}</RouterLink></li>
           </ul>
         </div>
 
         <!-- Destinations -->
         <div>
-          <h3 class="text-yellow-300 font-bold text-lg mb-3">Destinations</h3>
+          <h3 class="text-yellow-300 font-bold text-lg mb-3">{{ t('footer_destinations') }}</h3>
           <ul class="space-y-2 text-sm">
-            <li><RouterLink to="/" class="text-green-200 hover:text-yellow-300 transition-colors">Kigali city</RouterLink></li>
-            <li><RouterLink to="/" class="text-green-200 hover:text-yellow-300 transition-colors">Northern Province</RouterLink></li>
-            <li><RouterLink to="/" class="text-green-200 hover:text-yellow-300 transition-colors">Southern province</RouterLink></li>
-            <li><RouterLink to="/" class="text-green-200 hover:text-yellow-300 transition-colors">Western Province</RouterLink></li>
-            <li><RouterLink to="/" class="text-green-200 hover:text-yellow-300 transition-colors">Eastern Province</RouterLink></li>
+            <li><RouterLink to="/" class="text-green-200 hover:text-yellow-300 transition-colors">{{ t('kigali') }}</RouterLink></li>
+            <li><RouterLink to="/" class="text-green-200 hover:text-yellow-300 transition-colors">{{ t('northern') }}</RouterLink></li>
+            <li><RouterLink to="/" class="text-green-200 hover:text-yellow-300 transition-colors">{{ t('southern') }}</RouterLink></li>
+            <li><RouterLink to="/" class="text-green-200 hover:text-yellow-300 transition-colors">{{ t('western') }}</RouterLink></li>
+            <li><RouterLink to="/" class="text-green-200 hover:text-yellow-300 transition-colors">{{ t('eastern') }}</RouterLink></li>
           </ul>
         </div>
 
         <!-- Contact info -->
         <div>
-          <h3 class="text-yellow-300 font-bold text-lg mb-3">Contact</h3>
+          <h3 class="text-yellow-300 font-bold text-lg mb-3">{{ t('contact') }}</h3>
           <ul class="space-y-2 text-sm">
             <li class="text-green-200">KG 7 Ave, Kigali, Rwanda</li>
             <li class="text-green-200">Kagugu-Kigali</li>
@@ -50,3 +50,7 @@
     </div>
   </footer>
 </template>
+
+<script setup>
+import { t } from '../i18n'
+</script>

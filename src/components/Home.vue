@@ -16,20 +16,20 @@
       <div class="relative z-10 text-center text-white px-6 max-w-5xl mx-auto">
 
         <h1 class="text-6xl md:text-8xl font-black leading-none mb-6 tracking-tight">
-          Discover<br>
-          <span class="text-yellow-400">Rwanda</span>
+          {{ t('discover') }}<br>
+          <span class="text-yellow-400">{{ t('rwanda') }}</span>
         </h1>
         <p class="text-xl md:text-2xl text-green-100 max-w-2xl mx-auto mb-10 leading-relaxed">
-          Where pristine gorilla habitats meet vibrant culture, rolling green hills, and breathtaking landscapes. Your African adventure starts here.
+          {{ t('hero_sub') }}
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
           <RouterLink to="/Services"
             class="bg-yellow-400 hover:bg-yellow-300 text-green-900 font-bold text-lg px-10 py-4 rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-2xl">
-            Explore Services
+            {{ t('explore_services') }}
           </RouterLink>
           <RouterLink to="/about"
             class="border-2 border-white hover:border-yellow-400 hover:text-yellow-400 text-white font-bold text-lg px-10 py-4 rounded-full transition-all duration-300">
-            About Rwanda
+            {{ t('about_rwanda') }}
           </RouterLink>
         </div>
       </div>
@@ -43,16 +43,16 @@
     <section class="py-24 bg-white">
       <div class="max-w-6xl mx-auto px-6">
         <div class="text-center mb-16">
-          <span class="text-yellow-500 font-bold tracking-widest uppercase text-sm">Why Visit</span>
-          <h2 class="text-5xl font-black text-green-900 mt-2">Rwanda Awaits You</h2>
+          <span class="text-yellow-500 font-bold tracking-widest uppercase text-sm">{{ t('why_visit_label') }}</span>
+          <h2 class="text-5xl font-black text-green-900 mt-2">{{ t('rwanda_awaits') }}</h2>
           
         </div>
         <div class="grid md:grid-cols-3 gap-8">
-          <div v-for="feature in features" :key="feature.title"
+          <div v-for="feature in features" :key="feature.titleKey"
             class="group p-8 rounded-2xl border-2 border-gray-100 hover:border-green-600 hover:bg-green-900 transition-all duration-500 cursor-default">
             <div class="text-4xl mb-4">{{ feature.icon }}</div>
-            <h3 class="text-xl font-bold text-green-900 group-hover:text-yellow-400 mb-3 transition-colors">{{ feature.title }}</h3>
-            <p class="text-gray-600 group-hover:text-green-200 leading-relaxed transition-colors">{{ feature.desc }}</p>
+            <h3 class="text-xl font-bold text-green-900 group-hover:text-yellow-400 mb-3 transition-colors">{{ t(feature.titleKey) }}</h3>
+            <p class="text-gray-600 group-hover:text-green-200 leading-relaxed transition-colors">{{ t(feature.descKey) }}</p>
           </div>
         </div>
       </div>
@@ -63,11 +63,11 @@
     <section class="py-24 bg-green-900 text-white text-center opacity-80">
       <div class="max-w-3xl mx-auto px-6">
         <div class="text-5xl mb-6"></div>
-        <h2 class="text-5xl font-black mb-6">Ready for Your<br><span class="text-yellow-400">Rwanda Adventure?</span></h2>
-        <p class="text-green-200 text-xl mb-10">From mountain gorillas to vibrant city life — Rwanda offers unforgettable experiences for every traveler.</p>
+        <h2 class="text-5xl font-black mb-6">{{ t('cta_title') }}<br><span class="text-yellow-400">{{ t('cta_highlight') }}</span></h2>
+        <p class="text-green-200 text-xl mb-10">{{ t('cta_sub') }}</p>
         <RouterLink to="/contact"
           class="inline-block bg-yellow-400 hover:bg-yellow-300 text-green-900 font-black text-xl px-12 py-5 rounded-full transition-all duration-300 transform hover:scale-105">
-          Plan My Trip
+          {{ t('plan_trip') }}
         </RouterLink>
       </div>
     </section>
@@ -75,39 +75,15 @@
 </template>
 
 <script setup>
-
+import { t } from '../i18n'
 
 const features = [
-  {
-    icon: '',
-    title: 'Gorilla Trekking',
-    desc: 'One of the world\'s most extraordinary wildlife encounters — meet mountain gorillas in their natural volcanic forest habitat.'
-  },
-  {
-    icon: '',
-    title: 'Eco-Tourism',
-    desc: 'Rwanda is Africa\'s leading eco-tourism destination, committed to sustainable travel and preserving its natural wonders.'
-  },
-  {
-    icon: '',
-    title: 'Rich Culture',
-    desc: 'Explore vibrant traditions, Intore dance, art, and a resilient people whose warmth and hospitality are world-renowned.'
-  },
-  {
-    icon: '',
-    title: 'Stunning Scenery',
-    desc: 'Rolling emerald hills, shimmering lakes, and volcanic peaks — Rwanda\'s landscapes are endlessly photogenic.'
-  },
-  {
-    icon: '',
-    title: 'Wildlife Safaris',
-    desc: 'From Akagera\'s Big Five to Nyungwe\'s chimpanzees, Rwanda offers thrilling safari experiences across diverse ecosystems.'
-  },
-  {
-    icon: '',
-    title: 'Kigali City',
-    desc: 'Africa\'s cleanest and safest capital city, with world-class restaurants, museums, and a buzzing nightlife scene.'
-  },
+  { icon: '', titleKey: 'feature_1_title', descKey: 'feature_1_desc' },
+  { icon: '', titleKey: 'feature_2_title', descKey: 'feature_2_desc' },
+  { icon: '', titleKey: 'feature_3_title', descKey: 'feature_3_desc' },
+  { icon: '', titleKey: 'feature_4_title', descKey: 'feature_4_desc' },
+  { icon: '', titleKey: 'feature_5_title', descKey: 'feature_5_desc' },
+  { icon: '', titleKey: 'feature_6_title', descKey: 'feature_6_desc' },
 ]
 
 const destinations = [

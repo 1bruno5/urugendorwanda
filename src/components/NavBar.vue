@@ -84,7 +84,7 @@
           <div v-show="langOpen"
             class="absolute top-full right-0 mt-2 w-48 bg-white rounded-lg shadow-xl py-1 border border-gray-100">
             <button v-for="lang in languages" :key="lang.code"
-              @click="setLang(lang.code)"
+              @click="setLangLocal(lang.code)"
               class="w-full flex items-center gap-3 px-4 py-2.5 hover:bg-green-50 transition-colors text-left"
               :class="activeLang === lang.code ? 'text-green-700 font-bold' : 'text-green-900 font-medium'">
               <span class="text-lg">{{ lang.flag }}</span>
@@ -128,7 +128,7 @@
         <div class="text-green-400 text-xs font-bold tracking-widest uppercase mb-2">Language</div>
         <div class="flex gap-2">
           <button v-for="lang in languages" :key="lang.code"
-            @click="setLang(lang.code)"
+            @click="setLangLocal(lang.code)"
             class="flex items-center gap-1 px-3 py-1.5 rounded-full text-sm font-bold transition-colors"
             :class="activeLang === lang.code ? 'bg-yellow-400 text-green-900' : 'bg-green-700 text-white hover:bg-green-600'">
             {{ lang.flag }} {{ lang.code }}
@@ -141,55 +141,18 @@
 </template>
 
 <script setup>
-import { ref, computed } from 'vue'
+import { ref } from 'vue'
+import { activeLang, languages, currentLang, setLang, t } from '../i18n'
 
 const galleryOpen = ref(false)
 const destOpen    = ref(false)
 const mobileOpen  = ref(false)
 const langOpen    = ref(false)
-const activeLang  = ref(localStorage.getItem('lang') || 'EN')
 
-const languages = [
-  { code: 'EN', label: 'English',     native: 'English',      flag: '🇬🇧' },
-  { code: 'RW', label: 'Kinyarwanda', native: 'Ikinyarwanda', flag: '🇷🇼' },
-  { code: 'FR', label: 'French',      native: 'Français',     flag: '🇫🇷' },
-]
-
-const currentLang = computed(() => languages.find(l => l.code === activeLang.value) || languages[0])
-
-function setLang(code) {
-  activeLang.value = code
-  localStorage.setItem('lang', code)
+function setLangLocal(code) {
+  setLang(code)
   langOpen.value = false
-}
-
-// ── All translations inside NavBar (no external file needed) ──────────────
-const translations = {
-  EN: {
-    home: 'Home', about: 'About Us', services: 'Services',
-    gallery: 'Gallery', photos: 'Photos', videos: 'Videos',
-    destinations: 'Destinations', contact: 'Contact',
-    northern: 'Northern Province', southern: 'Southern Province',
-    kigali: 'Kigali City', eastern: 'Eastern Province', western: 'Western Province',
-  },
-  RW: {
-    home: 'Ahabanza', about: 'Abo Turi Bo', services: 'Serivisi',
-    gallery: 'Amafoto', photos: 'Amafoto', videos: 'Amavideo',
-    destinations: 'Aho Ugiye', contact: 'Twandikire',
-    northern: "Intara y'Amajyaruguru", southern: "Intara y'Amajyepfo",
-    kigali: 'Umujyi wa Kigali', eastern: "Intara y'Iburasirazuba", western: "Intara y'Iburengerazuba",
-  },
-  FR: {
-    home: 'Accueil', about: 'À Propos', services: 'Services',
-    gallery: 'Galerie', photos: 'Photos', videos: 'Vidéos',
-    destinations: 'Destinations', contact: 'Contact',
-    northern: 'Province du Nord', southern: 'Province du Sud',
-    kigali: 'Ville de Kigali', eastern: "Province de l'Est", western: "Province de l'Ouest",
-  },
-}
-
-function t(key) {
-  return translations[activeLang.value]?.[key] || translations['EN'][key] || key
+  mobileOpen.value = false
 }
 
 const destinations = [
