@@ -66,7 +66,7 @@
             </RouterLink>
           </div>
         </div>
-
+                    
         <RouterLink to="/contact"
           class="font-semibold hover:text-yellow-400 transition-colors duration-200"
           :class="$route.path === '/contact' ? 'text-yellow-400' : 'text-white'">

@@ -7,21 +7,21 @@
      
       <div class="relative z-10 max-w-6xl mx-auto px-6 pb-14 w-full">
         <div class="flex items-center gap-2 text-green-200 text-sm mb-3">
-          <a href="/" class="hover:text-yellow-300 transition-colors">Home</a>
+          <a href="/" class="hover:text-yellow-300 transition-colors">{{ t('home') }}</a>
           <span>›</span>
-          <a href="/destinations" class="hover:text-yellow-300 transition-colors">Destinations</a>
+          <a href="/destinations" class="hover:text-yellow-300 transition-colors">{{ t('destinations') }}</a>
           <span>›</span>
-          <span class="text-yellow-400 font-semibold">Kigali City</span>
+          <span class="text-yellow-400 font-semibold">{{ t('kigali_hero_title') }}</span>
         </div>
-        <h1 class="text-6xl font-black text-white mb-3">Kigali <span class="text-yellow-400">City</span></h1>
+        <h1 class="text-6xl font-black text-white mb-3">{{ t('kigali_hero_title') }}</h1>
         <p class="text-green-200 text-xl max-w-2xl leading-relaxed">
-          Africa's cleanest, safest, and most dynamic capital — where modernity meets rich culture on the beautiful hills of Rwanda.
+          {{ t('kigali_hero_desc') }}
         </p>
         <div class="flex flex-wrap gap-3 mt-6">
-          <span class="bg-green-800/80 text-green-200 text-sm font-semibold px-4 py-2 rounded-full"> Genocide Memorial</span>
-          <span class="bg-green-800/80 text-green-200 text-sm font-semibold px-4 py-2 rounded-full"> Art & Culture</span>
-          <span class="bg-green-800/80 text-green-200 text-sm font-semibold px-4 py-2 rounded-full"> World-Class Dining</span>
-          <span class="bg-green-800/80 text-green-200 text-sm font-semibold px-4 py-2 rounded-full"> Intore Dance</span>
+          <span class="bg-green-800/80 text-green-200 text-sm font-semibold px-4 py-2 rounded-full">{{ t('kigali_tag_1') }}</span>
+          <span class="bg-green-800/80 text-green-200 text-sm font-semibold px-4 py-2 rounded-full">{{ t('kigali_tag_2') }}</span>
+          <span class="bg-green-800/80 text-green-200 text-sm font-semibold px-4 py-2 rounded-full">{{ t('kigali_tag_3') }}</span>
+          <span class="bg-green-800/80 text-green-200 text-sm font-semibold px-4 py-2 rounded-full">{{ t('kigali_tag_4') }}</span>
         </div>
       </div>
     </section>
@@ -31,16 +31,16 @@
     <section class="py-24 bg-white">
       <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
         <div>
-          <span class="text-yellow-500 font-bold tracking-widest uppercase text-sm">About the City</span>
-          <h2 class="text-4xl font-black text-green-900 mt-2 mb-6">Africa's Gem Capital</h2>
+          <span class="text-yellow-500 font-bold tracking-widest uppercase text-sm">{{ t('province_about_label') }}</span>
+          <h2 class="text-4xl font-black text-green-900 mt-2 mb-6">{{ t('kigali_about_title') }}</h2>
           <p class="text-gray-600 text-lg leading-relaxed mb-4">
-            Kigali is consistently ranked Africa's <strong class="text-green-800">cleanest and safest capital city</strong> — a remarkable achievement that reflects Rwanda's extraordinary transformation since 1994.
+            {{ t('kigali_about_desc_1') }}
           </p>
           <p class="text-gray-600 text-lg leading-relaxed mb-4">
-            Spread across a series of scenic hills, the city blends sleek modern architecture with vibrant markets, world-class restaurants, and a thriving arts scene. The Kigali Convention Centre has made Rwanda a leading destination for international conferences and events.
+            {{ t('kigali_about_desc_2') }}
           </p>
           <p class="text-gray-600 text-lg leading-relaxed">
-            A visit to the Kigali Genocide Memorial is both powerful and essential — a profound tribute to Rwanda's history and an inspiring testament to the nation's spirit of reconciliation.
+            {{ t('kigali_about_desc_3') }}
           </p>
         </div>
         <div class="rounded-3xl overflow-hidden shadow-2xl h-96">
@@ -53,8 +53,8 @@
     <section class="py-24 bg-green-50">
       <div class="max-w-6xl mx-auto px-6">
         <div class="text-center mb-14">
-          <span class="text-yellow-500 font-bold tracking-widest uppercase text-sm">Culture & Heritage</span>
-          <h2 class="text-4xl font-black text-green-900 mt-2">Kigali's Living Culture</h2>
+          <span class="text-yellow-500 font-bold tracking-widest uppercase text-sm">{{ t('province_culture_label') }}</span>
+          <h2 class="text-4xl font-black text-green-900 mt-2">{{ t('kigali_feature_title') }}</h2>
           <div class="w-20 h-1 bg-yellow-400 mx-auto mt-4"></div>
         </div>
         <div class="grid md:grid-cols-2 gap-10 items-center">
@@ -79,8 +79,8 @@
     <section class="py-24 bg-white">
       <div class="max-w-6xl mx-auto px-6">
         <div class="text-center mb-14">
-          <span class="text-yellow-500 font-bold tracking-widest uppercase text-sm">Top Attractions</span>
-          <h2 class="text-4xl font-black text-green-900 mt-2">What to See & Do</h2>
+          <span class="text-yellow-500 font-bold tracking-widest uppercase text-sm">{{ t('province_top_attractions_label') }}</span>
+          <h2 class="text-4xl font-black text-green-900 mt-2">{{ t('province_what_to_see_title') }}</h2>
           <div class="w-20 h-1 bg-yellow-400 mx-auto mt-4"></div>
         </div>
         <div class="grid md:grid-cols-3 gap-6">
@@ -102,11 +102,11 @@
     <section class="py-24 bg-green-900 text-white text-center">
       <div class="max-w-3xl mx-auto px-6">
         <div class="text-6xl mb-6">🏙️</div>
-        <h2 class="text-5xl font-black mb-6">Discover <span class="text-yellow-400">Kigali</span></h2>
-        <p class="text-green-200 text-xl mb-10">From the memorial to the markets — Kigali is a city that will move, inspire, and energise you.</p>
+        <h2 class="text-5xl font-black mb-6">{{ t('kigali_cta_title') }}</h2>
+        <p class="text-green-200 text-xl mb-10">{{ t('kigali_cta_desc') }}</p>
         <a href="/contact"
           class="inline-block bg-yellow-400 hover:bg-yellow-300 text-green-900 font-black text-xl px-12 py-5 rounded-full transition-all duration-300 transform hover:scale-105">
-          Plan My Kigali Trip
+          {{ t('kigali_cta_button') }}
         </a>
       </div>
     </section>

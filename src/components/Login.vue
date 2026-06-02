@@ -1,7 +1,7 @@
 <template>
  <div class="flex items-center justify-center bg-green-100 min-h-screen">
    <div class="bg-white p-8 rounded-lg shadow-md w-full max-w-md">
-     <h2 class="text-2xl font-bold text-green-800 mb-6 text-center">LOGIN NOW</h2>
+     <h2 class="text-2xl font-bold text-green-800 mb-6 text-center">LOGIN </h2>
      <form class="flex flex-col gap-4">
        <input
          v-model="email"
@@ -21,7 +21,7 @@
        type="submit"
        class="bg-green-800 text-white py-2 rounded hover:bg-green-700 transition duration-300"
      >
-       LOGIN
+       <RouterLink to="/dashboard" class="text-white font-semibold hover:underline">LOGIN</RouterLink>
      </button>
    </form>
    <p class="text-center text-sm mt-4 text-gray-600">

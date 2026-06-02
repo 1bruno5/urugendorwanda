@@ -7,21 +7,21 @@
       
       <div class="relative z-10 max-w-6xl mx-auto px-6 pb-14 w-full">
         <div class="flex items-center gap-2 text-green-200 text-sm mb-3">
-          <a href="/" class="hover:text-yellow-300 transition-colors">Home</a>
+          <a href="/" class="hover:text-yellow-300 transition-colors">{{ t('home') }}</a>
           <span>›</span>
-          <a href="/destinations" class="hover:text-yellow-300 transition-colors">Destinations</a>
+          <a href="/destinations" class="hover:text-yellow-300 transition-colors">{{ t('destinations') }}</a>
           <span>›</span>
-          <span class="text-yellow-400 font-semibold">Northern Province</span>
+          <span class="text-yellow-400 font-semibold">{{ t('north_hero_title') }}</span>
         </div>
-        <h1 class="text-6xl font-black text-white mb-3">Northern <span class="text-yellow-400">Province</span></h1>
+        <h1 class="text-6xl font-black text-white mb-3">{{ t('north_hero_title') }}</h1>
         <p class="text-green-200 text-xl max-w-2xl leading-relaxed">
-          Land of volcanic peaks, mountain gorillas, and twin crater lakes — Rwanda's most dramatic and iconic region.
+          {{ t('north_hero_desc') }}
         </p>
         <div class="flex flex-wrap gap-3 mt-6">
-          <span class="bg-green-800/80 text-green-200 text-sm font-semibold px-4 py-2 rounded-full"> Gorilla Trekking</span>
-          <span class="bg-green-800/80 text-green-200 text-sm font-semibold px-4 py-2 rounded-full"> Volcanoes Park</span>
-          <span class="bg-green-800/80 text-green-200 text-sm font-semibold px-4 py-2 rounded-full"> Hiking & Trekking</span>
-          <span class="bg-green-800/80 text-green-200 text-sm font-semibold px-4 py-2 rounded-full"> Twin Lakes</span>
+          <span class="bg-green-800/80 text-green-200 text-sm font-semibold px-4 py-2 rounded-full">{{ t('north_tag_1') }}</span>
+          <span class="bg-green-800/80 text-green-200 text-sm font-semibold px-4 py-2 rounded-full">{{ t('north_tag_2') }}</span>
+          <span class="bg-green-800/80 text-green-200 text-sm font-semibold px-4 py-2 rounded-full">{{ t('north_tag_3') }}</span>
+          <span class="bg-green-800/80 text-green-200 text-sm font-semibold px-4 py-2 rounded-full">{{ t('north_tag_4') }}</span>
         </div>
       </div>
     </section>
@@ -32,16 +32,16 @@
     <section class="py-24 bg-white">
       <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
         <div>
-          <span class="text-yellow-500 font-bold tracking-widest uppercase text-sm">About the Region</span>
-          <h2 class="text-4xl font-black text-green-900 mt-2 mb-6">Where Giants Roam</h2>
+          <span class="text-yellow-500 font-bold tracking-widest uppercase text-sm">{{ t('province_about_label') }}</span>
+          <h2 class="text-4xl font-black text-green-900 mt-2 mb-6">{{ t('north_about_title') }}</h2>
           <p class="text-gray-600 text-lg leading-relaxed mb-4">
-            The Northern Province is home to <strong class="text-green-800">Volcanoes National Park</strong> — one of the most extraordinary wildlife sanctuaries on earth and the only place in Rwanda where you can trek to see mountain gorillas in their natural habitat.
+            {{ t('north_about_desc_1') }}
           </p>
           <p class="text-gray-600 text-lg leading-relaxed mb-4">
-            The park sits within the Virunga Massif, a chain of eight towering volcanoes straddling Rwanda, Uganda, and the DRC. The dramatic landscape is a hiker's paradise, with trails to volcano summits, golden monkey habitats, and the famous Dian Fossey grave site.
+            {{ t('north_about_desc_2') }}
           </p>
           <p class="text-gray-600 text-lg leading-relaxed">
-            Beyond the park, the charming town of Musanze offers lava tube caves, the serene twin lakes of Burera and Ruhondo, and a thriving local culture.
+            {{ t('north_about_desc_3') }}
           </p>
         </div>
         <div class="rounded-3xl overflow-hidden shadow-2xl h-96">
@@ -54,8 +54,8 @@
     <section class="py-24 bg-green-50">
       <div class="max-w-6xl mx-auto px-6">
         <div class="text-center mb-14">
-          <span class="text-yellow-500 font-bold tracking-widest uppercase text-sm">Signature Experience</span>
-          <h2 class="text-4xl font-black text-green-900 mt-2">Gorilla Trekking</h2>
+          <span class="text-yellow-500 font-bold tracking-widest uppercase text-sm">{{ t('province_signature_label') }}</span>
+          <h2 class="text-4xl font-black text-green-900 mt-2">{{ t('north_feature_title') }}</h2>
           <div class="w-20 h-1 bg-yellow-400 mx-auto mt-4"></div>
         </div>
         <div class="grid md:grid-cols-2 gap-10 items-center">
@@ -80,8 +80,8 @@
     <section class="py-24 bg-white">
       <div class="max-w-6xl mx-auto px-6">
         <div class="text-center mb-14">
-          <span class="text-yellow-500 font-bold tracking-widest uppercase text-sm">Top Attractions</span>
-          <h2 class="text-4xl font-black text-green-900 mt-2">What to See & Do</h2>
+          <span class="text-yellow-500 font-bold tracking-widest uppercase text-sm">{{ t('province_top_attractions_label') }}</span>
+          <h2 class="text-4xl font-black text-green-900 mt-2">{{ t('province_what_to_see_title') }}</h2>
           <div class="w-20 h-1 bg-yellow-400 mx-auto mt-4"></div>
         </div>
         <div class="grid md:grid-cols-3 gap-6">
@@ -103,11 +103,11 @@
     <section class="py-24 bg-blue-100 text-white text-center">
       <div class="max-w-3xl mx-auto px-6">
         <div class="text-6xl mb-6"></div>
-        <h2 class="text-5xl font-black mb-6">Ready to Meet the <span class="text-yellow-400">Gorillas?</span></h2>
-        <p class="text-green-600 text-xl mb-10">Gorilla permits sell out fast. Contact us today to secure your unforgettable encounter.</p>
+        <h2 class="text-5xl font-black mb-6">{{ t('north_cta_title') }}</h2>
+        <p class="text-green-600 text-xl mb-10">{{ t('north_cta_desc') }}</p>
         <a href="/contact"
           class="inline-block bg-yellow-400 hover:bg-yellow-300 text-green-900 font-black text-xl px-12 py-5 rounded-full transition-all duration-300 transform hover:scale-105">
-          Book Gorilla Trek
+          {{ t('north_cta_button') }}
         </a>
       </div>
     </section>
@@ -117,11 +117,11 @@
 
 <script setup>
 const quickFacts = [
-  { value: 'Musanze', label: 'Capital City' },
-  { value: '3,504 km²', label: 'Total Area' },
-  { value: '~2M', label: 'Population' },
-  { value: '4,507m', label: 'Highest Peak' },
-  { value: '~2 hrs', label: 'From Kigali' },
+  { value: 'Musanze', labelKey: 'province_label_capital_city' },
+  { value: '3,504 km²', labelKey: 'province_label_total_area' },
+  { value: '~2M', labelKey: 'province_label_population' },
+  { value: '4,507m', labelKey: 'province_label_highest_peak' },
+  { value: '~2 hrs', labelKey: 'province_label_from_kigali' },
 ]
 
 const trekSteps = [

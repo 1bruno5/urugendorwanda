@@ -7,21 +7,21 @@
       
       <div class="relative z-10 max-w-6xl mx-auto px-6 pb-14 w-full">
         <div class="flex items-center gap-2 text-green-200 text-sm mb-3">
-          <a href="/" class="hover:text-yellow-300 transition-colors">Home</a>
+          <a href="/" class="hover:text-yellow-300 transition-colors">{{ t('home') }}</a>
           <span>›</span>
-          <a href="/destinations" class="hover:text-yellow-300 transition-colors">Destinations</a>
+          <a href="/destinations" class="hover:text-yellow-300 transition-colors">{{ t('destinations') }}</a>
           <span>›</span>
-          <span class="text-yellow-400 font-semibold">Southern Province</span>
+          <span class="text-yellow-400 font-semibold">{{ t('south_hero_title') }}</span>
         </div>
-        <h1 class="text-6xl font-black text-white mb-3">Southern <span class="text-yellow-400">Province</span></h1>
+        <h1 class="text-6xl font-black text-white mb-3">{{ t('south_hero_title') }}</h1>
         <p class="text-green-200 text-xl max-w-2xl leading-relaxed">
-          Ancient rainforests, chimpanzees, tea-covered hills, and the iconic canopy walkway — Rwanda's green southern heart.
+          {{ t('south_hero_desc') }}
         </p>
         <div class="flex flex-wrap gap-3 mt-6">
-          <span class="bg-green-800/80 text-green-200 text-sm font-semibold px-4 py-2 rounded-full"> Nyungwe Forest</span>
-          <span class="bg-green-800/80 text-green-200 text-sm font-semibold px-4 py-2 rounded-full"> Chimpanzee Tracking</span>
-          <span class="bg-green-800/80 text-green-200 text-sm font-semibold px-4 py-2 rounded-full"> Canopy Walkway</span>
-          <span class="bg-green-800/80 text-green-200 text-sm font-semibold px-4 py-2 rounded-full"> Tea Plantations</span>
+          <span class="bg-green-800/80 text-green-200 text-sm font-semibold px-4 py-2 rounded-full">{{ t('south_tag_1') }}</span>
+          <span class="bg-green-800/80 text-green-200 text-sm font-semibold px-4 py-2 rounded-full">{{ t('south_tag_2') }}</span>
+          <span class="bg-green-800/80 text-green-200 text-sm font-semibold px-4 py-2 rounded-full">{{ t('south_tag_3') }}</span>
+          <span class="bg-green-800/80 text-green-200 text-sm font-semibold px-4 py-2 rounded-full">{{ t('south_tag_4') }}</span>
         </div>
       </div>
     </section>
@@ -32,16 +32,16 @@
     <section class="py-24 bg-white">
       <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
         <div>
-          <span class="text-yellow-500 font-bold tracking-widest uppercase text-sm">About the Region</span>
-          <h2 class="text-4xl font-black text-green-900 mt-2 mb-6">Africa's Ancient Rainforest</h2>
+          <span class="text-yellow-500 font-bold tracking-widest uppercase text-sm">{{ t('province_about_label') }}</span>
+          <h2 class="text-4xl font-black text-green-900 mt-2 mb-6">{{ t('south_about_title') }}</h2>
           <p class="text-gray-600 text-lg leading-relaxed mb-4">
-            The Southern Province is anchored by <strong class="text-green-800">Nyungwe Forest National Park</strong> — one of Africa's oldest and most biodiverse montane rainforests, covering over 1,000 km² of ancient trees, misty valleys, and cascading waterfalls.
+            {{ t('south_about_desc_1') }}
           </p>
           <p class="text-gray-600 text-lg leading-relaxed mb-4">
-            Track chimpanzees and 13 other primate species, walk the thrilling suspension canopy walkway 50 metres above the forest floor, or hike to the source of the Nile near Nyungwe's watershed.
+            {{ t('south_about_desc_2') }}
           </p>
           <p class="text-gray-600 text-lg leading-relaxed">
-            The province is also home to Rwanda's tea country — rolling hills blanketed with emerald tea estates around Huye, Nyamagabe, and Nyaruguru districts.
+            {{ t('south_about_desc_3') }}
           </p>
         </div>
         <div class="rounded-3xl overflow-hidden shadow-2xl h-96">
@@ -54,11 +54,11 @@
     <section class="py-24 bg-green-50">
       <div class="max-w-6xl mx-auto px-6">
         <div class="text-center mb-14">
-          <span class="text-yellow-500 font-bold tracking-widest uppercase text-sm">Signature Experience</span>
-          <h2 class="text-4xl font-black text-green-900 mt-2">The Canopy Walkway</h2>
+          <span class="text-yellow-500 font-bold tracking-widest uppercase text-sm">{{ t('province_signature_label') }}</span>
+          <h2 class="text-4xl font-black text-green-900 mt-2">{{ t('south_feature_title') }}</h2>
           <div class="w-20 h-1 bg-yellow-400 mx-auto mt-4"></div>
           <p class="text-gray-600 max-w-2xl mx-auto mt-4 text-lg">
-            Walk 160 metres across a suspension bridge suspended 50 metres above the forest floor — one of the most thrilling experiences in all of Africa.
+            {{ t('south_feature_desc') || 'Walk 160 metres across a suspension bridge suspended 50 metres above the forest floor — one of the most thrilling experiences in all of Africa.' }}
           </p>
         </div>
         <div class="grid md:grid-cols-3 gap-6">
@@ -76,8 +76,8 @@
     <section class="py-24 bg-white">
       <div class="max-w-6xl mx-auto px-6">
         <div class="text-center mb-14">
-          <span class="text-yellow-500 font-bold tracking-widest uppercase text-sm">Top Attractions</span>
-          <h2 class="text-4xl font-black text-green-900 mt-2">What to See & Do</h2>
+          <span class="text-yellow-500 font-bold tracking-widest uppercase text-sm">{{ t('province_top_attractions_label') }}</span>
+          <h2 class="text-4xl font-black text-green-900 mt-2">{{ t('province_what_to_see_title') }}</h2>
           <div class="w-20 h-1 bg-yellow-400 mx-auto mt-4"></div>
         </div>
         <div class="grid md:grid-cols-3 gap-6">
@@ -99,11 +99,11 @@
     <section class="py-24 bg-blue-100 text-white text-center">
       <div class="max-w-3xl mx-auto px-6">
         <div class="text-6xl mb-6"></div>
-        <h2 class="text-5xl font-black mb-6">Explore the <span class="text-yellow-400">Ancient Forest</span></h2>
-        <p class="text-green-600 text-xl mb-10">From chimpanzee tracking to the canopy walkway — Nyungwe offers experiences unlike anywhere else on earth.</p>
+        <h2 class="text-5xl font-black mb-6">{{ t('south_cta_title') }}</h2>
+        <p class="text-green-600 text-xl mb-10">{{ t('south_cta_desc') }}</p>
         <a href="/contact"
           class="inline-block bg-yellow-400 hover:bg-yellow-300 text-green-900 font-black text-xl px-12 py-5 rounded-full transition-all duration-300 transform hover:scale-105">
-          Plan My Visit
+          {{ t('south_cta_button') }}
         </a>
       </div>
     </section>

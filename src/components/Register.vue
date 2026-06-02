@@ -28,6 +28,15 @@
 					class="border border-gray-300 rounded px-4 py-2 focus:outline-none focus:border-green-600"
 				/>
 
+				<input
+					v-model="age"
+					type="number"
+					min="0"
+					placeholder="Age"
+					required
+					class="border border-gray-300 rounded px-4 py-2 focus:outline-none focus:border-green-600"
+				/>
+
 				<select
 					v-model="gender"
 					required
@@ -38,6 +47,15 @@
 					<option>Female</option>
 					<option>Other</option>
 				</select>
+
+                
+				<input
+					v-model="Password"
+					type="Password"
+					placeholder="Password"
+					required
+					class="border border-gray-300 rounded px-4 py-2 focus:outline-none focus:border-green-600"
+				/>
 
 				<button
 					type="submit"
@@ -62,13 +80,15 @@ const router = useRouter()
 const fullName = ref('')
 const email = ref('')
 const phone = ref('')
+const age = ref('')
 const gender = ref('')
 
 const register = () => {
-	const payload = {
+		const payload = {
 		fullName: fullName.value,
 		email: email.value,
 		phone: phone.value,
+		age: Number(age.value),
 		gender: gender.value,
 	}
 	// TODO: wire to backend service. For now, log and navigate to Login.

@@ -7,21 +7,21 @@
       
       <div class="relative z-10 max-w-6xl mx-auto px-6 pb-14 w-full">
         <div class="flex items-center gap-2 text-green-200 text-sm mb-3">
-          <a href="/" class="hover:text-yellow-300 transition-colors">Home</a>
+          <a href="/" class="hover:text-yellow-300 transition-colors">{{ t('home') }}</a>
           <span>›</span>
-          <a href="/destinations" class="hover:text-yellow-300 transition-colors">Destinations</a>
+          <a href="/destinations" class="hover:text-yellow-300 transition-colors">{{ t('destinations') }}</a>
           <span>›</span>
-          <span class="text-yellow-400 font-semibold">Eastern Province</span>
+          <span class="text-yellow-400 font-semibold">{{ t('east_hero_title') }}</span>
         </div>
-        <h1 class="text-6xl font-black text-white mb-3">Eastern <span class="text-yellow-400">Province</span></h1>
+        <h1 class="text-6xl font-black text-white mb-3">{{ t('east_hero_title') }}</h1>
         <p class="text-green-200 text-xl max-w-2xl leading-relaxed">
-          Rwanda's safari heartland — home to Akagera National Park, the Big Five, shimmering lakes, and wide open savannahs stretching to the Tanzanian border.
+          {{ t('east_hero_desc') }}
         </p>
         <div class="flex flex-wrap gap-3 mt-6">
-          <span class="bg-green-800/80 text-green-200 text-sm font-semibold px-4 py-2 rounded-full"> Big Five Safari</span>
-          <span class="bg-green-800/80 text-green-200 text-sm font-semibold px-4 py-2 rounded-full"> Boat Safaris</span>
-          <span class="bg-green-800/80 text-green-200 text-sm font-semibold px-4 py-2 rounded-full"> 525+ Bird Species</span>
-          <span class="bg-green-800/80 text-green-200 text-sm font-semibold px-4 py-2 rounded-full"> Scenic Lakes</span>
+          <span class="bg-green-800/80 text-green-200 text-sm font-semibold px-4 py-2 rounded-full">{{ t('east_tag_1') }}</span>
+          <span class="bg-green-800/80 text-green-200 text-sm font-semibold px-4 py-2 rounded-full">{{ t('east_tag_2') }}</span>
+          <span class="bg-green-800/80 text-green-200 text-sm font-semibold px-4 py-2 rounded-full">{{ t('east_tag_3') }}</span>
+          <span class="bg-green-800/80 text-green-200 text-sm font-semibold px-4 py-2 rounded-full">{{ t('east_tag_4') }}</span>
         </div>
       </div>
     </section>
@@ -32,16 +32,16 @@
     <section class="py-24 bg-white">
       <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
         <div>
-          <span class="text-yellow-500 font-bold tracking-widest uppercase text-sm">About the Region</span>
-          <h2 class="text-4xl font-black text-green-900 mt-2 mb-6">Rwanda's Wild East</h2>
+          <span class="text-yellow-500 font-bold tracking-widest uppercase text-sm">{{ t('province_about_label') }}</span>
+          <h2 class="text-4xl font-black text-green-900 mt-2 mb-6">{{ t('east_about_title') }}</h2>
           <p class="text-gray-600 text-lg leading-relaxed mb-4">
-            The Eastern Province is the largest province in Rwanda, stretching across vast savannahs, papyrus-lined wetlands, and a chain of beautiful lakes along the Tanzanian border.
+            {{ t('east_about_desc_1') }}
           </p>
           <p class="text-gray-600 text-lg leading-relaxed mb-4">
-            It is home to <strong class="text-green-800">Akagera National Park</strong> — Rwanda's only savannah park and the only place in the country where you can encounter all of the Big Five: lion, leopard, elephant, buffalo, and the critically endangered black rhino.
+            {{ t('east_about_desc_2') }}
           </p>
           <p class="text-gray-600 text-lg leading-relaxed">
-            Beyond wildlife, the province offers serene lakes for kayaking and fishing, vibrant local communities, and a relaxed pace of life.
+            {{ t('east_about_desc_3') }}
           </p>
         </div>
         <div class="rounded-3xl overflow-hidden shadow-2xl h-96">
@@ -56,11 +56,11 @@
 
     <div class="text-center mb-14">
       <span class="text-yellow-500 font-bold tracking-widest uppercase text-sm">
-        Must Visit
+        {{ t('province_must_visit_label') }}
       </span>
 
       <h2 class="text-4xl font-black text-green-900 mt-2">
-        Akagera National Park
+        {{ t('east_feature_title') }}
       </h2>
 
       <div class="w-20 h-1 bg-yellow-400 mx-auto mt-4"></div>
@@ -132,8 +132,8 @@
     <section class="py-24 bg-white">
       <div class="max-w-6xl mx-auto px-6">
         <div class="text-center mb-14">
-          <span class="text-yellow-500 font-bold tracking-widest uppercase text-sm">Top Attractions</span>
-          <h2 class="text-4xl font-black text-green-900 mt-2">What to See & Do</h2>
+          <span class="text-yellow-500 font-bold tracking-widest uppercase text-sm">{{ t('province_top_attractions_label') }}</span>
+          <h2 class="text-4xl font-black text-green-900 mt-2">{{ t('province_what_to_see_title') }}</h2>
           <div class="w-20 h-1 bg-yellow-400 mx-auto mt-4"></div>
         </div>
         <div class="grid md:grid-cols-3 gap-6">
@@ -176,11 +176,11 @@
     <section class="py-24 bg-blue-100 text-white text-center">
       <div class="max-w-3xl mx-auto px-6">
         <div class="text-6xl mb-6"></div>
-        <h2 class="text-5xl font-black mb-6">Ready to Explore the <span class="text-yellow-400">Eastern Province?</span></h2>
-        <p class="text-green-900 text-xl mb-10">Let our local experts plan your perfect safari and lake adventure in Rwanda's wild east.</p>
+        <h2 class="text-5xl font-black mb-6">{{ t('east_cta_title') }}</h2>
+        <p class="text-green-900 text-xl mb-10">{{ t('east_cta_desc') }}</p>
         <a href="/contact"
           class="inline-block bg-yellow-400 hover:bg-yellow-300 text-green-900 font-black text-xl px-12 py-5 rounded-full transition-all duration-300 transform hover:scale-105">
-          Plan My Trip
+          {{ t('east_cta_button') }}
         </a>
       </div>
     </section>

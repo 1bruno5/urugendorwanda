@@ -1,4 +1,4 @@
-<script>
+﻿<script>
 import flagImage from '../assets/images/flag.jpg'
 </script>
 
@@ -20,10 +20,10 @@ import flagImage from '../assets/images/flag.jpg'
       </div>
       
       <div class="relative z-10 max-w-5xl mx-auto px-6 text-center">
-        <span class="text-yellow-400 font-bold tracking-widest uppercase text-sm">Our Story</span>
-        <h1 class="text-6xl font-black mt-3 mb-6">About <span class="text-yellow-400">Rwanda</span></h1>
+        <span class="text-yellow-400 font-bold tracking-widest uppercase text-sm">{{ t('about_hero_label') }}</span>
+        <h1 class="text-6xl font-black mt-3 mb-6">{{ t('about_hero_title') }}</h1>
         <p class="text-green-200 text-xl max-w-2xl mx-auto leading-relaxed">
-          The Land of a Thousand Hills — a nation of extraordinary resilience, stunning beauty, and warm hospitality nestled in the heart of Africa.
+          {{ t('about_hero_desc') }}
         </p>
       </div>
     </section>
@@ -32,24 +32,18 @@ import flagImage from '../assets/images/flag.jpg'
     <section class="py-24 bg-white">
       <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
         <div>
-          <span class="text-yellow-500 font-bold tracking-widest uppercase text-sm">Who We Are</span>
-          <h2 class="text-4xl font-black text-green-900 mt-2 mb-6">Tembera Urwanda</h2>
-          <p class="text-gray-600 text-lg leading-relaxed mb-4">
-            "Tembera Urwanda" means <strong class="text-green-800">"Visit Rwanda"</strong> in Kinyarwanda. We are a tourism platform dedicated to showcasing the very best of Rwanda — its wildlife, culture, landscapes, and people.
-          </p>
-          <p class="text-gray-600 text-lg leading-relaxed mb-4">
-            From the misty mountain jungles of Volcanoes National Park to the sun-drenched shores of Lake Kivu, we guide travelers through authentic Rwandan experiences that leave lasting memories.
-          </p>
-          <p class="text-gray-600 text-lg leading-relaxed">
-            We believe in responsible, sustainable tourism that benefits local communities and preserves Rwanda's precious natural heritage for generations to come.
-          </p>
+          <span class="text-yellow-500 font-bold tracking-widest uppercase text-sm">{{ t('about_who_we_are_label') }}</span>
+          <h2 class="text-4xl font-black text-green-900 mt-2 mb-6">{{ t('about_brand_title') }}</h2>
+          <p class="text-gray-600 text-lg leading-relaxed mb-4">{{ t('about_para_1') }}</p>
+          <p class="text-gray-600 text-lg leading-relaxed mb-4">{{ t('about_para_2') }}</p>
+          <p class="text-gray-600 text-lg leading-relaxed">{{ t('about_para_3') }}</p>
         </div>
         <div class="grid grid-cols-2 gap-4">
-          <div v-for="card in aboutCards" :key="card.title"
+          <div v-for="card in aboutCards" :key="card.titleKey"
             class="bg-green-50 rounded-2xl p-6 text-center hover:bg-green-900 group transition-all duration-300">
             <div class="text-4xl mb-3">{{ card.icon }}</div>
-            <h3 class="font-bold text-green-900 group-hover:text-yellow-400 transition-colors">{{ card.title }}</h3>
-            <p class="text-sm text-gray-500 group-hover:text-green-200 mt-1 transition-colors">{{ card.sub }}</p>
+            <h3 class="font-bold text-green-900 group-hover:text-yellow-400 transition-colors">{{ t(card.titleKey) }}</h3>
+            <p class="text-sm text-gray-500 group-hover:text-green-200 mt-1 transition-colors">{{ t(card.subKey) }}</p>
           </div>
         </div>
       </div>
@@ -58,16 +52,13 @@ import flagImage from '../assets/images/flag.jpg'
     <!-- Mission -->
     <section class="py-24 bg-green-900 text-white">
       <div class="max-w-4xl mx-auto px-6 text-center">
-        <div class="text-5xl mb-6"></div>
-        <h2 class="text-4xl font-black mb-6">Our <span class="text-yellow-400">Mission</span></h2>
-        <p class="text-green-200 text-xl leading-relaxed mb-8">
-          To promote responsible tourism across Rwanda, connecting travelers with authentic experiences while supporting local communities and protecting the environment that makes Rwanda so extraordinary.
-        </p>
+        <h2 class="text-4xl font-black mb-6">{{ t('mission_title') }}</h2>
+        <p class="text-green-200 text-xl leading-relaxed mb-8">{{ t('mission_desc') }}</p>
         <div class="grid md:grid-cols-3 gap-6 mt-12">
-          <div v-for="value in values" :key="value.title" class="bg-green-800 rounded-2xl p-6">
+          <div v-for="value in values" :key="value.titleKey" class="bg-green-800 rounded-2xl p-6">
             <div class="text-3xl mb-3">{{ value.icon }}</div>
-            <h3 class="font-bold text-yellow-400 mb-2">{{ value.title }}</h3>
-            <p class="text-green-300 text-sm">{{ value.desc }}</p>
+            <h3 class="font-bold text-yellow-400 mb-2">{{ t(value.titleKey) }}</h3>
+            <p class="text-green-300 text-sm">{{ t(value.descKey) }}</p>
           </div>
         </div>
       </div>
@@ -77,15 +68,15 @@ import flagImage from '../assets/images/flag.jpg'
 
 <script setup>
 const aboutCards = [
-  { icon: '', title: 'Wildlife', sub: 'Gorillas & Big Five' },
-  { icon: '', title: 'Eco-Tourism', sub: 'Sustainable Travel' },
-  { icon: '', title: 'Culture', sub: 'Rich Traditions' },
-  { icon: '', title: 'Adventure', sub: 'Hiking & Trekking' },
+  { icon: '', titleKey: 'about_card_wildlife', subKey: 'about_card_wildlife_sub' },
+  { icon: '', titleKey: 'about_card_eco', subKey: 'about_card_eco_sub' },
+  { icon: '', titleKey: 'about_card_culture', subKey: 'about_card_culture_sub' },
+  { icon: '', titleKey: 'about_card_adventure', subKey: 'about_card_adventure_sub' },
 ]
 
 const values = [
-  { icon: '', title: 'Sustainability', desc: 'We promote eco-friendly travel that protects Rwanda\'s natural resources.' },
-  { icon: '', title: 'Community', desc: 'Supporting local guides, artisans, and businesses in every province.' },
-  { icon: '', title: 'Authenticity', desc: 'Genuine experiences that connect you with Rwanda\'s true spirit.' },
+  { icon: '', titleKey: 'about_value_sustainability', descKey: 'about_value_sustainability_desc' },
+  { icon: '', titleKey: 'about_value_community', descKey: 'about_value_community_desc' },
+  { icon: '', titleKey: 'about_value_authenticity', descKey: 'about_value_authenticity_desc' },
 ]
 </script>
