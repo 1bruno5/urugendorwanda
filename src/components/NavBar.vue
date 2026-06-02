@@ -72,6 +72,12 @@
           :class="$route.path === '/contact' ? 'text-yellow-400' : 'text-white'">
           {{ t('contact') }}
         </RouterLink>
+        
+          <RouterLink to="/login"
+          class="font-semibold hover:text-yellow-400 transition-colors duration-200"
+          :class="$route.path === '/login' ? 'text-yellow-400' : 'text-white'">
+          {{ t('login') }}
+        </RouterLink>
 
         <!-- Language Switcher -->
         <div class="relative" @mouseenter="langOpen = true" @mouseleave="langOpen = false">
